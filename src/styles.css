@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  background: var(--bg);
+  color: var(--fg);
+  transition: background 0.3s, color 0.3s;
+}
+
+:root {
+  --bg: #f9fafb;
+  --fg: #111827;
+  --card: #ffffff;
+  --border: #e5e7eb;
+}
+
+[data-theme="dark"] {
+  --bg: #111827;
+  --fg: #f9fafb;
+  --card: #1f2937;
+  --border: #374151;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+input, textarea, select {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px;
+  margin-top: 4px;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+textarea {
+  resize: vertical;
+}
+
+button, .btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover, .btn:hover {
+  background: #1e40af;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--fg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.btn-ghost:hover {
+  background: var(--border);
+}
+
+.preview {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.no-print {
+  display: block;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
